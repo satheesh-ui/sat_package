@@ -1,7 +1,12 @@
 {
-  "name": "react-hr-component",
+  "name": "react-hr-component-sat-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
@@ -15,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rmdir /s /q dist && mkdir dist &&  babel src/component -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/preset-react": "^7.16.7"
   }
 }
